@@ -7,27 +7,27 @@
 #include <string>
 #include <vector>
 #include <iostream>
-
+/*
 int main() {
-  /*auto content = FileParser::ParseFile<std::string>(
+  auto content = FileParser::ParseFile<std::string>(
       "^(Uid):\\s+([0-9]+)\\s+.*$",
       "/Users/henrikorpela/Documents/pid-status.txt",
       [](std::vector<std::string> groups) {
         return groups[0];
-      });*/
+      });
 
   auto content = FileParser::ParseFile<std::string>(
       "^(Uid):\\s+([0-9]+)\\s+.*$",
       "/Users/henrikorpela/Documents/pid-status.txt",
       [](std::vector<std::string> groups) {
         return groups[0];
-      })
+      });
 
   for (auto it = content.begin(); it != content.end(); it++) {
     auto key = it->first;
     std::cout << key << " -> " << content[key] << std::endl;
   }
-}
+}*/
   /*auto content = FileParser::ParseFile<CpuStats>(
       "^([A-Za-z]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+)\\s+([0-9]+).*$",
       "/Users/henrikorpela/Documents/stat.txt",
