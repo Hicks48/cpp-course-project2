@@ -42,11 +42,11 @@ namespace LinuxParser {
   };
 
   struct PidStat {
-    long utime = 0;
-    long stime = 0;
-    long cutime = 0;
-    long cstime = 0;
-    long starttime = 0;
+    long utime = -1;
+    long stime = -1;
+    long cutime = -1;
+    long cstime = -1;
+    long starttime = -1;
   };
 
   CpuStats CpuUtilization();
