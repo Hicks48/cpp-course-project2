@@ -1,12 +1,6 @@
 #include <dirent.h>
-#include <unistd.h>
 #include <string>
 #include <vector>
-
-#include <sstream>
-#include <unordered_map>
-#include <utility>
-#include <iostream>
 #include <math.h>
 
 #include "file_parser.h"

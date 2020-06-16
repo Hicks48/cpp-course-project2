@@ -42,7 +42,7 @@ std::vector<Process>& System::Processes() {
 
     const auto process = Process(
         pid,
-        LinuxParser::PidStat(),
+        LinuxParser::Stat(pid),
         prevStat,
         LinuxParser::UpTime(),
         LinuxParser::Ram(pid),
