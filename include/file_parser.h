@@ -47,7 +47,7 @@ namespace FileParser {
       int numberOfLinesToParse = -1) {
 
     std::unordered_map<std::string, T> contents;
-    std::fstream file(filepath);
+    std::ifstream file(filepath);
     if (!file.is_open()) {
       return contents;
     }

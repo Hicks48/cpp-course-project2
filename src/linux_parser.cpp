@@ -139,7 +139,7 @@ int LinuxParser::RunningProcesses() {
 }
 
 string LinuxParser::Command(int pid) {
-  std::fstream stream(kProcDirectory + std::to_string(pid) + kCmdlineFilename);
+  std::ifstream stream(kProcDirectory + std::to_string(pid) + kCmdlineFilename);
   if (!stream.is_open()) {
     return string();
   }
@@ -177,7 +177,7 @@ string LinuxParser::User(int pid) {
 LinuxParser::PidStat LinuxParser::Stat(int pid) {
   PidStat stats;
 
-  std::fstream fileStream(kProcDirectory + std::to_string(pid) + kStatFilename);
+  std::ifstream fileStream(kProcDirectory + std::to_string(pid) + kStatFilename);
   if (!fileStream.is_open()) {
     return stats;
   }
